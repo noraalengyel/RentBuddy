@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <p style="color:#a5b4fc;">Coming Soon</p>
-  <p style="opacity:0.7;">
-    Join 100+ renters waiting for transparency
-  </p>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>RentBuddy</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container">
-    <h1>RentBuddy</h1>
-    <h3>Know Before You Rent</h3>
-    <p>Real tenant reviews, hidden costs, and honest insight about landlords. Real rental transparency.</p>
 
-    <div class="features">
-      <div class="feature">
-        <h3>Real Reviews</h3>
-        <p>See what tenants actually experienced.</p>
-      </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
 
-      <div class="feature">
-        <h3>True Costs</h3>
-        <p>No more hidden fees or surprises.</p>
-      </div>
+    <div class="hero-content fade-up">
+      <p class="badge">Coming Soon</p>
+      <h1>RentBuddy</h1>
+      <h2>Know Before You Rent</h2>
 
-      <div class="feature">
-        <h3>Flat Insights</h3>
-        <p>Know the real condition before moving in.</p>
-      </div>
+      <p class="subtitle">
+        Real tenant reviews, hidden costs, and honest landlord insights.
+      </p>
+
+      <button id="cta-btn">Get Early Access</button>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features fade-up">
+    <div class="feature">
+      <h3>Real Reviews</h3>
+      <p>See what tenants actually experienced.</p>
     </div>
 
-    <div class="card">
+    <div class="feature">
+      <h3>True Costs</h3>
+      <p>No hidden fees. Ever.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Flat Insights</h3>
+      <p>Know before you move in.</p>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section id="form-section">
+    <div class="form-card">
       <h2>Join Early Access</h2>
+
       <form id="signup-form">
         <input type="text" id="name" placeholder="Full Name" required />
         <input type="email" id="email" placeholder="Email Address" required />
@@ -46,30 +61,8 @@
 
       <p id="response-message"></p>
     </div>
-  </div>
+  </section>
 
-  <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbyjTUxDTd64kOq5u7lBZg5m4MmlNML_QeSrmSQZ3-kgmN3GrU54TCzn5hJ8YXNWSWyDuQ/exec";
-
-    document.getElementById("signup-form").addEventListener("submit", e => {
-      e.preventDefault();
-
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-
-      fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify({ name, email }),
-      })
-        .then(() => {
-          document.getElementById("response-message").innerText = "You're on the list!";
-        })
-        .catch(() => {
-          document.getElementById("response-message").innerText = "Something went wrong.";
-        });
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
