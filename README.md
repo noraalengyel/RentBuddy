@@ -1,0 +1,2 @@
+# RentBuddy
+Landing Page 
