@@ -1,8 +1,10 @@
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
+  height: 100%;
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #fae7c9;
@@ -13,18 +15,25 @@ body {
 /* HERO */
 
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
+
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  overflow: hidden;
 }
 
 .hero-content {
   position: relative;
   text-align: center;
-  max-width: 700px;
+  max-width: 800px;
+  margin: auto;
   animation: floatUp 1.2s ease forwards;
+
+  padding: 20px;
 }
 
 .hero.hide {
@@ -40,6 +49,8 @@ body {
   background: url("your-image.jpg") center/cover no-repeat;
   filter: blur(10px) brightness(0.85);
   transform: scale(1.1);
+
+  z-index: -1;
 }
 
 /* warm overlay */
@@ -95,10 +106,12 @@ button:hover {
   display: flex;
   gap: 20px;
   margin: 40px 0;
+
+  flex-wrap: wrap;
 }
 
 .feature {
-  flex: 1;
+  flex: 1 1 250px;
   padding: 20px;
   border-radius: 16px;
 
