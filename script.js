@@ -1,18 +1,16 @@
 const scriptURL = "https://script.google.com/macros/s/AKfycbyjTUxDTd64kOq5u7lBZg5m4MmlNML_QeSrmSQZ3-kgmN3GrU54TCzn5hJ8YXNWSWyDuQ/exec";
 
-const formSection = document.getElementById("form-section");
 const ctaBtn = document.getElementById("cta-btn");
+const formPage = document.getElementById("form-page");
+const hero = document.getElementById("hero");
 
-// SMOOTH REVEAL (NO JUMP)
+// FAKE PAGE TRANSITION
 ctaBtn.addEventListener("click", () => {
-  formSection.classList.add("active");
+  hero.classList.add("hide");
 
   setTimeout(() => {
-    formSection.scrollIntoView({
-      behavior: "smooth",
-      block: "center"
-    });
-  }, 200);
+    formPage.classList.add("active");
+  }, 300);
 });
 
 // FORM SUBMIT
