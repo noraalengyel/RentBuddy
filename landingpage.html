@@ -37,7 +37,7 @@
         body: JSON.stringify({ name, email }),
       })
       .then(() => {
-        document.getElementById("response-message").innerText = "You're on the list 🚀";
+        document.getElementById("response-message").innerText = "You're on the list!";
       })
       .catch(() => {
         document.getElementById("response-message").innerText = "Something went wrong.";
