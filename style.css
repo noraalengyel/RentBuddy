@@ -33,16 +33,6 @@ body {
   transition: all 0.8s ease;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(250, 231, 201, 0.2),
-    rgba(250, 231, 201, 0.9)
-  );
-}
 
 .bg {
   position: absolute;
