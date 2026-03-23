@@ -140,9 +140,60 @@ button:hover {
     opacity: 0.2;
 }
 
-.feature-icon{
-    font-size: 1.8rem;
-    margin-bottom: 12px;
+.feature::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(110, 99, 69, 0.15),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.feature-icon {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(110, 99, 69, 0.08);
+  backdrop-filter: blur(6px);
+
+  transition: all 0.4s ease;
+}
+
+/* SVG */
+.feature-icon svg {
+  width: 22px;
+  height: 22px;
+
+  stroke: #6E6345;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: all 0.4s ease;
+}
+
+.feature:hover::after {
+  opacity: 1;
+}
+
+.feature:hover .feature-icon {
+  transform: translateY(-3px) scale(1.1);
+  background: rgba(110, 99, 69, 0.15);
+}
+
+.feature:hover .feature-icon svg {
+  stroke: #4f4630;
 }
 
 .feature h3{
