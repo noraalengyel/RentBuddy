@@ -286,3 +286,64 @@ input:focus {
     transform: translateY(0);
   }
 }
+
+/* =========================
+   MOBILE OPTIMISATION
+========================= */
+
+@media (max-width: 768px) {
+
+  /* HERO TEXT */
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* HERO SPACING */
+  .hero-content {
+    padding: 20px 16px;
+  }
+
+  /* FEATURES STACK */
+  .features {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .feature {
+    padding: 18px;
+  }
+
+  .feature:hover {
+    transform: none; /* removes weird hover on touch */
+  }
+
+  /* BUTTON */
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* SMALL TEXT UNDER BUTTON */
+  .hero-content p:last-child {
+    font-size: 0.8rem;
+  }
+
+  /* FORM */
+  .form-container {
+    padding: 0 20px;
+  }
+
+  input {
+    padding: 14px;
+    font-size: 0.95rem;
+  }
+
+}
