@@ -295,7 +295,9 @@ input:focus {
 
   /* HERO TEXT */
   h1 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+    line-height: 1.2; /* 👈 prevents cutting */
+    margin-top: 10px; /* 👈 adds breathing room */
   }
 
   h2 {
@@ -311,14 +313,39 @@ input:focus {
     padding: 20px 16px;
   }
 
+  .hero {
+    padding: 20px 0;
+  }
+
   /* FEATURES STACK */
   .features {
     flex-direction: column;
     gap: 16px;
+    margin: 25px 0;
   }
 
   .feature {
-    padding: 18px;
+    padding: 14px 16px;
+    border-radius: 14px;
+  }
+
+   .feature h3 {
+    font-size: 1rem;
+  }
+
+  .feature p {
+    font-size: 0.85rem;
+  }
+
+  .feature-icon {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 8px;
+  }
+
+  .feature-icon svg {
+    width: 18px;
+    height: 18px;
   }
 
   .feature:hover {
